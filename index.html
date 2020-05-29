@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="age guess">
+    <meta name="keywords" content="age, game">
+    <meta name="author" content="sean mcleod">
+      <title>Guess My Age!</title>
+  </head>
+  <body>
+    <h1>Guess My Age!</h1>
+    <p>To play this game, guess and type in the computer's age in the
+    <br>textbox below and press the button.</p>
+    <br>
+    <input id="ekko" type="text">
+    <br>
+    <br>
+    <button onclick="myfunction()">Click!</button>
+    <br>
+    <p id="jg"></p>
+    <script>
+      function myfunction() {
+      let age
+      let myage
+      age= document.getElementById("ekko").value
+      myage= 43
+      if (age==myage)
+      document.getElementById("jg").innerHTML= "You got it right!!"
+      else if (age<myage)
+      document.getElementById("jg").innerHTML= "You guessed too small. Please try again."
+      else if (age>myage)
+      document.getElementById("jg").innerHTML= "You guessed too big. Please try again."
+      else
+      document.getElementById("jg").innerHTML= "Invalid answer. Please try again."
+      }
+    </script>
+  </body>
+</html>
